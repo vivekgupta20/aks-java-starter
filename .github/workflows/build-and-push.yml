@@ -24,7 +24,7 @@ jobs:
     - name: Build and Push catalog image
       run: |
         IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/catalog-svc:latest
-        docker build -t $IMAGE ./catalog-svc
+        docker build -t $IMAGE ./apps/catalog-svc
         docker push $IMAGE
 
     - name: Build and Push identity image
