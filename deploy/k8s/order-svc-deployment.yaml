@@ -1,0 +1,40 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-svc
+  namespace: apps
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: order-svc
+  template:
+    metadata:
+      labels:
+        app: order-svc
+    spec:
+      containers:
+      - name: order-svc
+        image: myacr.azurecr.io/order-svc:1.0.0  # TODO: change
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8080
+          initialDelaySeconds: 15
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8080
+          initialDelaySeconds: 5
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "default"  # set to "azure" for PostgreSQL
+        - name: JDBC_URL
+          value: "jdbc:postgresql://<server>.postgres.database.azure.com:5432/<db>?sslmode=require"
+        - name: DB_USER
+          value: "<username>"
+        - name: DB_PASSWORD
+          value: "<password>"

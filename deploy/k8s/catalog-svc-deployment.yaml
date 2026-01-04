@@ -1,0 +1,40 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-svc
+  namespace: apps
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: catalog-svc
+  template:
+    metadata:
+      labels:
+        app: catalog-svc
+    spec:
+      containers:
+      - name: catalog-svc
+        image: myacr.azurecr.io/catalog-svc:1.0.0  # TODO: change
+        ports:
+        - containerPort: 8081
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8081
+          initialDelaySeconds: 15
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8081
+          initialDelaySeconds: 5
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "default"
+        - name: JDBC_URL
+          value: "jdbc:postgresql://<server>.postgres.database.azure.com:5432/<db>?sslmode=require"
+        - name: DB_USER
+          value: "<username>"
+        - name: DB_PASSWORD
+          value: "<password>"

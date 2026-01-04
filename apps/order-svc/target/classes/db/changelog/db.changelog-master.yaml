@@ -1,0 +1,12 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: 1-init-orders
+      author: starter
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column: { name: id, type: BIGINT, autoIncrement: true, constraints: { primaryKey: true } }
+              - column: { name: item, type: VARCHAR(255) }
+              - column: { name: qty, type: INT }
