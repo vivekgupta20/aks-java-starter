@@ -13,7 +13,8 @@ public class CatalogController {
     public List<Map<String, Object>> products() {
         return List.of(
             Map.of("id", 1, "name", "Laptop", "price", 1200),
-            Map.of("id", 2, "name", "Mouse", "price", 25)
+            Map.of("id", 2, "name", "Mouse", "price", 25),
+            Map.of("id", 3, "name", "Keyboard", "price", 45)
         );
     }
 }
