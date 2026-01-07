@@ -38,3 +38,9 @@ jobs:
         IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/order-svc:v1.0.3
         docker build -t $IMAGE ./apps/order-svc
         docker push $IMAGE
+    
+    - name: Build and Push webapp image
+      run: |
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/webapp:v1.0.3
+        docker build -t $IMAGE ./apps/webapp
+        docker push $IMAGE
