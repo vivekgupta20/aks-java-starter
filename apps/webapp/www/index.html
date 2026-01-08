@@ -9,9 +9,9 @@
 <body>
   <h1>Welcome</h1>
   <p>This is a simple webapp served by NGINX. Use the buttons to call backend services through internal cluster services.</p>
-  <button onclick="fetch('/api/orders').then(r=>r.json()).then(d=>out(d))">Get Orders</button>
-  <button onclick="fetch('/api/products').then(r=>r.json()).then(d=>out(d))">Get Products</button>
-  <button onclick="fetch('/api/whoami').then(r=>r.json()).then(d=>out(d))">Who Am I</button>
+  <button onclick="fetch('/webapp/api/orders').then(r=>r.json()).then(d=>out(d))">Get Orders</button>
+  <button onclick="fetch('/webapp/api/products').then(r=>r.json()).then(d=>out(d))">Get Products</button>
+  <button onclick="fetch('/webapp/api/whoami').then(r=>r.json()).then(d=>out(d))">Who Am I</button>
   <pre id="out"></pre>
   <script>
     function out(d){ document.getElementById('out').textContent = JSON.stringify(d, null, 2); }
