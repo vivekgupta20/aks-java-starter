@@ -1,2 +1,4 @@
 /Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/identity-svc/src/main/java/com/example/identity/IdentityApplication.java
 /Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/identity-svc/src/main/java/com/example/identity/controller/IdentityController.java
+/Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/identity-svc/src/main/java/main/java/com/example/identity/entity/User.java
+/Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/identity-svc/src/main/java/main/java/com/example/identity/repository/UserRepository.java

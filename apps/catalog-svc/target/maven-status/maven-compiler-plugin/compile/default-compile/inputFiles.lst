@@ -1,2 +1,4 @@
 /Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/catalog-svc/src/main/java/com/example/catalog/CatalogApplication.java
 /Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/catalog-svc/src/main/java/com/example/catalog/controller/CatalogController.java
+/Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/catalog-svc/src/main/java/com/example/catalog/entity/Product.java
+/Users/vivekgupta/Library/CloudStorage/OneDrive-DNBBankASA/Active/Work/devops-repos/aks-java-starter/apps/catalog-svc/src/main/java/com/example/catalog/repository/ProductRepository.java

@@ -1,2 +1,5 @@
+com/example/identity/IdentityApplication$1.class
 com/example/identity/IdentityApplication.class
+com/example/identity/entity/User.class
 com/example/identity/controller/IdentityController.class
+com/example/identity/repository/UserRepository.class

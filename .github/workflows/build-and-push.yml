@@ -23,24 +23,24 @@ jobs:
 
     - name: Build and Push catalog image
       run: |
-        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/catalog-svc:v1.0.4
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/catalog-svc:v1.0.7
         docker build -t $IMAGE ./apps/catalog-svc
         docker push $IMAGE
 
     - name: Build and Push identity image
       run: |
-        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/identity-svc:v1.0.3
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/identity-svc:v1.0.7
         docker build -t $IMAGE ./apps/identity-svc
         docker push $IMAGE
 
     - name: Build and Push order image
       run: |
-        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/order-svc:v1.0.3
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/order-svc:v1.0.7
         docker build -t $IMAGE ./apps/order-svc
         docker push $IMAGE
     
     - name: Build and Push webapp image
       run: |
-        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/webapp:v1.0.6
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/webapp:v1.0.7
         docker build -t $IMAGE ./apps/webapp
         docker push $IMAGE
