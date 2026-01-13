@@ -41,6 +41,6 @@ jobs:
     
     - name: Build and Push webapp image
       run: |
-        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/webapp:v1.0.7
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/webapp:v1.0.8
         docker build -t $IMAGE ./apps/webapp
         docker push $IMAGE
