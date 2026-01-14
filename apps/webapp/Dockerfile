@@ -27,6 +27,9 @@ FROM nginx:alpine
 # Copy the build output to the nginx html directory
 COPY --from=build /app/build /usr/share/nginx/html
 
+# Add Nginx configuration for proxying API requests
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Expose port 80
 EXPOSE 80
 
