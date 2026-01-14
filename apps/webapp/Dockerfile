@@ -14,9 +14,9 @@ RUN npm ci --only=production
 COPY ./ ./
 
 # Add environment variables for backend services
-ENV REACT_APP_CATALOG_API=http://catalog-svc:8080
-ENV REACT_APP_ORDER_API=http://order-svc:8080
-ENV REACT_APP_IDENTITY_API=http://identity-svc:8080
+ENV REACT_APP_CATALOG_API=http://catalog-svc:8080/products
+ENV REACT_APP_ORDER_API=http://order-svc:8080/orders
+ENV REACT_APP_IDENTITY_API=http://identity-svc:8080/users
 
 # Build the React app
 RUN npm run build
